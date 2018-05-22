@@ -114,8 +114,11 @@ class App extends Component {
 
     const totolScrollableHeight = this.state.appData.length * 50;
 
+    const isEndReached = scrollTop > totolScrollableHeight - 1010;
+
     if (
       this.state.totalNumberOfRows < 50 ||
+      isEndReached ||
       (index === 0 && this.state.index === index)
     ) {
       return;
